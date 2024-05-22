@@ -1,4 +1,3 @@
-
 .field {
   padding: 2rem;
   border-radius: 3px;
@@ -25,6 +24,7 @@
 }
 .lokal > p {
   margin: 0 5px;
+  font-size: 25px;
 }
 .local {
   background-color: #444451;
@@ -44,7 +44,6 @@
   height: 1em;
   width: 1.2em;
 }
-
 .reserved {
   background-color: rgb(211, 211, 18);
   color: black;
@@ -89,12 +88,6 @@ table,
 table {
   font-size: 18px;
 }
-footer {
-  display: flex;
-  justify-content: center;
-  padding: 3%;
-  font-size: 1.2em;
-}
 
 @media (min-width: 650px) {
   main {
@@ -126,12 +119,14 @@ footer {
   .lokal:hover {
     font-size: 30px;
   }
+
   table * {
     font-size: 22px;
   }
-  .tab{
+  .tab {
     width: 590px;
   }
+ 
 }
 @media (min-width: 800px) {
   .local {
@@ -154,9 +149,10 @@ footer {
   table * {
     font-size: 25px;
   }
-  .tab{
+  .tab {
     width: 647px;
   }
+  
 }
 
 @media (min-width: 1200px) {
@@ -174,12 +170,16 @@ footer {
     height: 2.4em;
     width: 3em;
   }
-  .tab{
+  .tab {
     width: 800px;
   }
+  
 }
 @media (max-width: 450px) {
   .local {
     font-size: 22px;
+  }
+  .lokal > p {
+    font-size: 20px;
   }
 }

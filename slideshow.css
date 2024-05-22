@@ -4,13 +4,7 @@
 main {
   display: grid;
 }
-footer {
-  display: flex;
-  justify-content: center;
-  padding: 3%;
 
-  font-size: 1.2em;
-}
 
 section {
   position: relative;
