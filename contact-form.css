@@ -18,7 +18,10 @@ form {
 .form {
   padding: 1%;
 }
+.check{
+  transform: scale(1.4);
 
+}
 
 #info {
   font-size: 1.2em;

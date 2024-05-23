@@ -1,14 +1,23 @@
 const locals = document.querySelectorAll(".l");
 const btn = document.querySelector(".button")
+const dost = document.querySelectorAll(".dost")
 let x = 0
-
+let i = 0;
 locals.forEach((local) =>{
   
     
         if(localStorage.getItem(local.id)!=null){
             if(localStorage.getItem(local.id).includes("unavailable")){
                 local.classList = localStorage.getItem(local.id)
-                
+                if(localStorage.getItem(local.id).includes("reserved")){
+                    dost[i].style.color = "rgb(211, 211, 18)"
+                    dost[i].innerHTML = "zarezerwowany"
+                }
+                else if(localStorage.getItem(local.id).includes("bought")){
+                    dost[i].style.color = "red"
+                    dost[i].innerHTML = "sprzedany"
+
+                }
             }
         }
     
@@ -25,6 +34,7 @@ locals.forEach((local) =>{
         }
         (x>0)? btn.href = "local.html" : btn.href = ""
     })
+    i++
 })  
 
 btn.addEventListener("click",()=>{

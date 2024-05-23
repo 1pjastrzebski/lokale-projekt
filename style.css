@@ -1,51 +1,102 @@
-main {
-  background-image: url("szeregowiec5.jpg");
-  background-color: #cccccc;
-  height: 1000px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: grid;
+.first,.second,.third {
+ display: flex;
+ height: 100vh;
 }
-main > h1 {
-  position: absolute;
+.second{
+  flex-direction: row-reverse;
+}
+.imgDiv{
+  height: 100%;
+  width: 50%;
+}
+img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.text{
+  width: 40%;
+  margin: auto;
+  padding: 2rem;
+  border-radius: 3px;
+  font-size: 1.5em;
+  align-self: center;
   text-align: center;
-  top: 30%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
+  display: flex;
+  flex-direction: column;
+}
+.text > h1 {
+
   font-size: 60px;
 }
-main > a {
-  position: absolute;
-  text-align: center;
-  top: 40%;
-  left: 50%;
-  color: white;
-  transform: translate(-50%, -50%);
+.text > a {
+  
+  color: black;
   font-size: 35px;
+  margin: auto;
+  border: 2px solid black;
+  background-color: white;
+  border-radius: 6px;
+  padding: 4px 6px;
+  text-decoration: none;
+  color: black;
+  width: 60%;
+}
+.text > a:hover {
+  background-color: black;
+  color: white;
+  animation-name: btn;
+  animation-duration: 0.3s;
+}
+@keyframes btn {
+  from {
+    background-color: white;
+    color: black;
+  }
+  to {
+    background-color: black;
+    color: white;
+  }
+}
+.text > p{
+  font-size: 25px;
 }
 @media (max-width:1000px){
-  main{
-    height: 800px;
-  }
-  main > h1{
+ 
+  .text > h1{
     font-size: 50px;
   }
-  main > a{
-    font-size: 30px;
-    top: 43%;
+  .text > a{
+    font-size: 25px;
   }
 }
-@media (max-width: 500px){
-  main{
-    height: 800px;
+@media (max-width: 800px){
+  .first,.second,.third{
+    flex-direction: column-reverse;
+    height: 100%;
   }
-  main > h1{
+  .imgDiv{
+    width: 100%;
+  }
+  .text{
+    width: 80%;
+  }
+  .text > h1{
     font-size: 45px;
   }
-  main > a{
+  .text > a{
+    font-size: 25px ;
+  }
+}
+@media (max-width: 550px){
+ 
+  .text > h1{
+    font-size: 40px;
+  }
+  .text > a{
     font-size: 25px;
-    top: 45%;
+  }
+  .text > p{
+    font-size: 20px;
   }
 }

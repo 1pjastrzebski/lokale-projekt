@@ -9,6 +9,9 @@ p{
 .form-error-text{
     color: tomato;
 }
+.check{
+    transform: scale(1.4);
+}
 @media (max-width:480px){
   
     form *{
